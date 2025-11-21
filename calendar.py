@@ -10,8 +10,8 @@ class ModernCalendarApp(ctk.Tk):
         self.title("Modern Calendar")
         self.geometry("900x700")
 
-        ctk.set_appearance_mode("dark")
-        ctk.set_default_color_theme("blue")
+        # ctk.set_appearance_mode("dark")
+        # ctk.set_default_color_theme("blue")
 
         self.bg_primary = "#0f0f23"
         self.bg_secondary = "#1a1a2e"
