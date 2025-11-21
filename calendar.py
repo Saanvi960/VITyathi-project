@@ -1,4 +1,4 @@
-import tkinter as ctk
+import tkinter as tk
 from datetime import datetime, timedelta
 import calendar
 
@@ -10,8 +10,8 @@ class ModernCalendarApp(ctk.Tk):
         self.title("Modern Calendar")
         self.geometry("900x700")
 
-        # ctk.set_appearance_mode("dark")
-        # ctk.set_default_color_theme("blue")
+        tk.set_appearance_mode("dark")
+        tk.set_default_color_theme("blue")
 
         self.bg_primary = "#0f0f23"
         self.bg_secondary = "#1a1a2e"
@@ -32,27 +32,27 @@ class ModernCalendarApp(ctk.Tk):
 
 
 def create_header(self):
-    header_frame = ctk.TkFrame(self, fg_color="transparent")
+    header_frame = tk.TkFrame(self, fg_color="transparent")
     header_frame.pack(pady=20, padx=20, fill="x")
 
-    self.prev_btn = ctk.TkButton(
+    self.prev_btn = tk.TkButton(
         header_frame, text="<", width=50, font=("Arial", 20, "bold"),
         command=self.previous_month, fg_color=self.accent_purple
     )
     self.prev_btn.pack(side="left" , padx=10)
 
-    self.month_year_label = ctk.TkLabel(
+    self.month_year_label = tk.TkLabel(
         header_frame, text="", font=("Arial", 28, "bold")
     )        
     self.month_year_label.pack(side="left", expand=True)
 
-    self.today_btn = ctk.TkButton(
+    self.today_btn = tk.TkButton(
         header_frame, text="Today", width=100, font=("Arial", 14, "bold"),
         command=self.go_to_today, fg_color=self.accent_pink
     )
     self.today_btn.pack(side="left", padx=10)
 
-    self.next_btn = ctk.TkButton(
+    self.next_btn = tk.TkButton(
         header_frame, text=">", width=50, font=("Arial", 20, "bold"),
         command=self.next_month, fg_color=self.accent_purple
     )
@@ -60,12 +60,12 @@ def create_header(self):
 
 
 def create_calendar_grid(self):
-    self.calendar_frame = ctk.TkFrame(self, fg_color="transparent")
+    self.calendar_frame = tk.TkFrame(self, fg_color="transparent")
     self.calendar_frame.pack(pady=10, padx=20, fill="both", expand=True)
 
     days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     for col, day in enumerate(days):
-        day_label = ctk.TkLabel(
+        day_label = tk.TkLabel(
             self.calendar_frame, text=day,
             font=("Arial", 14, "bold"), text_color=self.accent_pink
         )
@@ -75,7 +75,7 @@ def create_calendar_grid(self):
     for row in range(1, 7):
         week_buttons = []
         for col in range(7):
-            btn = ctk.TkButton(
+            btn = tk.TkButton(
                 self.calendar_frame, text="",
                 width=100, height=80, font=("Arial", 16),
                 fg_color=self.card_bg
@@ -86,33 +86,33 @@ def create_calendar_grid(self):
 
 
 def create_event_panel(self):
-    event_frame = ctk.TkFrame(self, corner_radius=15)
+    event_frame = tk.TkFrame(self, corner_radius=15)
     event_frame, text == "Events", font ==("Arial", 20, "bold")
 
-    title_label = ctk.TkLabel(
+    title_label = tk.TkLabel(
         event_frame, text="Events", font=("Arial", 20, "bold")
     )
     title_label.pack(pady=15)
 
-    self.selected_date_label = ctk.TkLabel(
+    self.selected_date_label = tk.TkLabel(
         event_frame, text="Select a date", font=("Arial", 14)
     )
     self.selected_date_label.pack(pady=5)
 
-    self.event_entry = ctk.TkEntry(
+    self.event_entry = tk.TkEntry(
         event_frame, placeholder_text="Add new event...",
     font=("Arial", 14), height=40
     )
     self.event_entry.pack(pady=10, padx=20, fill="x")
 
-    self.add_event_btn = ctk.TkButton(
+    self.add_event_btn = tk.TkButton(
         event_frame, text="Add Event",
         font=("Arial", 14, "bold"), command=self.add_event,
         fg_color=self.accent_purple, height=40
     )
     self.add_event_btn.pack(pady=5, padx=20, fill="x")
 
-    self.events_textbox = ctk.TkTextbox(
+    self.events_textbox = tk.TkTextbox(
         event_frame, font=("Arial", 13), wrap="word"
     )
     self.events_textbox.pack(pady=10, padx=20, fill="both", expand=True)
