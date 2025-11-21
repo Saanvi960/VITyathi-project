@@ -2,7 +2,7 @@ import tkinter as tk
 from datetime import datetime, timedelta
 import calendar
 
-class ModernCalendarApp(ctk.Tk):
+class ModernCalendarApp(tk.Tk):
     def __init__(self):
         super().__init__()
         
