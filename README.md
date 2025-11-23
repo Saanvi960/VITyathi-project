@@ -41,4 +41,5 @@ Run the application: python calendar.py
 Launch the application. Use the GUI to navigate through different months and years. To add an event, enter the date and event details in the designated fields and click "Add Event". View the calendar to see the added events highlighted on their respective dates.
 
 # Screenshot:-
-<img src="" alt="screenshot">
+
+<img width="398" height="201" alt="Screenshot 2025-11-22 141019" src="https://github.com/user-attachments/assets/ba1b7a5d-90be-4f4c-b58e-837bd8a124e6" />
